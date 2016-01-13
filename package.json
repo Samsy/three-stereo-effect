@@ -1,6 +1,6 @@
 {
   "name": "three-stereo-effect",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "stereo effect for three js ( VR ) ",
   "main": "index.js",
   "scripts": {
