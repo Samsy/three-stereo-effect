@@ -3,6 +3,7 @@
  * @authod mrdoob / http://mrdoob.com/
  * @authod arodic / http://aleksandarrodic.com/
  * @authod fonserbc / http://fonserbc.github.io/
+ * @authod samsy / http://samsy.ninja/
  *
  * Off-axis stereoscopic effect based on http://paulbourke.net/stereographics/stereorender/
  */

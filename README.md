@@ -21,7 +21,7 @@ function start(gl, width, height) {
 
     stereoEffect = new StereoEffect(renderer)
     stereoEffect.eyeSeparation = 1;
-    stereoEffect.setSize( window.innerWidth, window.innerHeight );
+    stereoEffect.setSize( width, height );
 
     var geo = new THREE.BoxGeometry(1,1,1)
     var mat = new THREE.MeshBasicMaterial({ wireframe: true, color: 0xffffff })
