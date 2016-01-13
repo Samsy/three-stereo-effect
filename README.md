@@ -1,8 +1,6 @@
 # three-stereo-effect
 A fork of the stereo effect for npm package
 
-# three-orbit-controls
-
 ThreeJS StereoEffect as an npm module. 
 
 ```js
