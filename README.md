@@ -39,6 +39,7 @@ function render(gl, width, height) {
 
 This module exports a function which accepts an instance of THREE, and returns an StereoEffect class. This allows you to use the module with CommonJS, globals, etc.
 
+
 The returned function has the following constructor pattern:
 
 ```js

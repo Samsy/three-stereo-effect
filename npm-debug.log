@@ -1,0 +1,93 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.4
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/shonigstein/Desktop/three-stereo-effect',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/shonigstein/.npm/three-stereo-effect/1.0.1/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/shonigstein/.npm/three-stereo-effect/1.0.1/package.tgz',
+9 verbose tar pack   '/Users/shonigstein/Desktop/three-stereo-effect' ]
+10 verbose tarball /Users/shonigstein/.npm/three-stereo-effect/1.0.1/package.tgz
+11 verbose folder /Users/shonigstein/Desktop/three-stereo-effect
+12 info prepublish three-stereo-effect@1.0.1
+13 verbose addLocalTarball adding from inside cache /Users/shonigstein/.npm/three-stereo-effect/1.0.1/package.tgz
+14 silly cache afterAdd three-stereo-effect@1.0.1
+15 verbose afterAdd /Users/shonigstein/.npm/three-stereo-effect/1.0.1/package/package.json not in flight; writing
+16 verbose afterAdd /Users/shonigstein/.npm/three-stereo-effect/1.0.1/package/package.json written
+17 silly publish { name: 'three-stereo-effect',
+17 silly publish   version: '1.0.1',
+17 silly publish   description: 'stereo effect for three js ( VR ) ',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/Samsy/three-stereo-effect.git' },
+17 silly publish   keywords: [ 'vr', 'webgl', 'threejs', 'stereo' ],
+17 silly publish   author: { name: 'samsy' },
+17 silly publish   license: 'ISC',
+17 silly publish   bugs: { url: 'https://github.com/Samsy/three-stereo-effect/issues' },
+17 silly publish   homepage: 'https://github.com/Samsy/three-stereo-effect#readme',
+17 silly publish   readme: '# three-stereo-effect\nA fork of the stereo effect for npm package\n\nThreeJS StereoEffect as an npm module. \n\n```js\nvar THREE = require(\'three\')\n\nvar StereoEffect = require(\'three-stereo-effect\')(THREE)\n\nfunction start(gl, width, height) {\n    renderer = new THREE.WebGLRenderer({\n        canvas: gl.canvas\n    })\n    renderer.setClearColor(0x000000, 1.0)\n\n    scene = new THREE.Scene()\n    camera = new THREE.PerspectiveCamera(50, width/height, 1, 1000)\n    camera.position.set(0, 1, -3)\n    camera.lookAt(new THREE.Vector3())\n\n    stereoEffect = new StereoEffect(renderer)\n    stereoEffect.eyeSeparation = 1;\n    stereoEffect.setSize( window.innerWidth, window.innerHeight );\n\n    var geo = new THREE.BoxGeometry(1,1,1)\n    var mat = new THREE.MeshBasicMaterial({ wireframe: true, color: 0xffffff })\n    var box = new THREE.Mesh(geo, mat)\n    scene.add(box)\n}\n\nfunction render(gl, width, height) {\n    stereoEffect.render(this.scene, this.camera)\n}\n```\n\n\n#### `StereoEffect = require(\'three-stereo-effect\')(THREE)`\n\nThis module exports a function which accepts an instance of THREE, and returns an StereoEffect class. This allows you to use the module with CommonJS, globals, etc.\n\nThe returned function has the following constructor pattern:\n\n```js\nstereoEffect = new StereoEffect(renderer)\n```\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'a18abe7b184b9d5d6256bdf2e6c2a00f47f0b7d9',
+17 silly publish   _id: 'three-stereo-effect@1.0.1',
+17 silly publish   _shasum: '1cbb5ca85ed12d6f3166c3a1e80ce6981759ca28',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name three-stereo-effect
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/three-stereo-effect
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/shonigstein/.npm/three-stereo-effect/1.0.1/package.tgz
+25 verbose request uri https://registry.npmjs.org/three-stereo-effect
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 4:52:50 PM
+28 verbose request using bearer token for auth
+29 verbose request id a39b6eeb8fa674fe
+30 http request PUT https://registry.npmjs.org/three-stereo-effect
+31 http 403 https://registry.npmjs.org/three-stereo-effect
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '95',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Wed, 13 Jan 2016 16:52:51 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-lhr6326-LHR',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1452703970.314232,VS0,VE1062' }
+33 verbose request invalidating /Users/shonigstein/.npm/registry.npmjs.org/three-stereo-effect on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 1.0.1." : three-stereo-effect
+35 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid three-stereo-effect
+38 verbose cwd /Users/shonigstein/Desktop/three-stereo-effect
+39 error Darwin 15.2.0
+40 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+41 error node v4.2.4
+42 error npm  v2.14.12
+43 error code E403
+44 error "You cannot publish over the previously published version 1.0.1." : three-stereo-effect
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
