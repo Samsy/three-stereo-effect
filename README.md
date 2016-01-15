@@ -30,7 +30,7 @@ function start(gl, width, height) {
 }
 
 function render(gl, width, height) {
-    stereoEffect.render(this.scene, this.camera)
+    stereoEffect.render(scene, camera)
 }
 ```
 
