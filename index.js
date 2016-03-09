@@ -9,7 +9,7 @@
  */
 
 
-module.exports = function(THREE, renderer) {  
+module.exports = function(THREE, renderer) {
 
 	function StereoEffect(renderer){
 
@@ -134,7 +134,7 @@ module.exports = function(THREE, renderer) {
 			//
 
 			renderer.clear();
-			renderer.enableScissorTest( true );
+			renderer.setScissorTest( true );
 
 			renderer.setScissor( 0, 0, _width, _height );
 			renderer.setViewport( 0, 0, _width, _height );
@@ -144,7 +144,7 @@ module.exports = function(THREE, renderer) {
 			renderer.setViewport( _width, 0, _width, _height );
 			renderer.render( scene, _cameraR );
 
-			renderer.enableScissorTest( false );
+			renderer.setScissorTest( false );
 
 		};
 
